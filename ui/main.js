@@ -2,7 +2,7 @@ console.log('Loaded!');
 var element = document.getElementById("button");
 
 element.onclick = function(){
-  alert('Hello world');
+  locationhref = 'http://adi2342.imad.hasura-app.io/listhelp'
 }
 
 console.log('Finished')
