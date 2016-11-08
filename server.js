@@ -24,13 +24,13 @@ app.get('/list-help', function(req,res) {
 })
 
 var pool = new Pool(config);
-app.get('/test-db', function(err,results){
-    pool.query('SELECT * from supply', function(err, results){
+app.get('/test-db', function(err,res){
+    pool.query('SELECT * from supply', function(err, result){
         if(err){
             res.status(500).send(toString());
         }
         else {
-            res.send(JSON.stringify(results));
+            res.send(JSON.stringify(result));
         }
     })
 })
