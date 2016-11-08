@@ -1,22 +1,11 @@
-body {
-    font-family: sans-serif;
-    background-color: white;
-    margin-top: 75px;
+.wrapper {
+  text-align: center;
 }
 
-.center {
-    text-align: center;
+.container{
+  background-color: grey;
 }
 
-.text-big {
-    font-size: 300%;
+button {
+margin-bottom : 2cm;
 }
-
-.bold {
-    font-weight: bold;
-}
-
-.img-medium {
-    height: 200px;
-}
-
