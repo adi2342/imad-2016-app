@@ -7,7 +7,7 @@ element.onclick = function(){
 
 console.log('Finished')
 
-var element = document.getElementById('submit-button');
+var element = document.getElementById("submit-button");
 element.onclick = function(){
     location.href = 'http://www.google.com'
 }
