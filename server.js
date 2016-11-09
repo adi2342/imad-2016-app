@@ -36,20 +36,19 @@ app.get('/test-db', function(err,res){
 })
 
 app.post('/create-help', function(req,res){
-    res.send(req.body.name);
     var name = req.body.name;
     var address = req.body.address;
     var phone = req.body.phone;
     var details = req.body.details;
-    
-    pool.query('INSERT INTO "supply" (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
-        if(err) {
-            res.status(500).send('Something');
-        }
-        else {
-            res.send('Successfully created');
-        }
-    })
+    res.send(name);
+ //   pool.query('INSERT INTO "supply" (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
+   //     if(err) {
+     //       res.status(500).send('Something');
+       // }
+        //else {
+          //  res.send('Successfully created');
+        //}
+    //})
 })
 app.get('/ui/main.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
