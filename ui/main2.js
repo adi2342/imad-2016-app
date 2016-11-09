@@ -1,9 +1,23 @@
 var element = document.getElementById('submit-button');
 
 element.onclick = function() {
- var email = document.getElementById('email').value;
- var password = document.getElementById('password').value;
- var address = document.getElementById('address').value;
- console.log(email);
+    var request = new XMLhttprequest();
+    
+    request.onreadystatechange = function(){
+        if (request.readystate === XMLHttpRequest.DONE) {
+            if(request.status === 200)
+            console.log('Posted successfully');
+            else(request.status === 500)
+            console.log('Something went wrong with the server');
+        }
+    }
 }
 
+// Making a request
+ var details = document.getElementById('details').value;
+ var phone = document.getElementById('phone').value;
+ var address = document.getElementById('address').value;
+ var name = document.getElementById('name').value
+ request.open('POST','http://adi2342.imad.hasura-app.io/store-data',true);
+ request.send(JSON.stringify({details : details, phone : phone, address : address, name : name}));
+// Sending data as post request
