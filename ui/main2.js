@@ -11,7 +11,6 @@ element.onclick = function() {
             console.log('Something went wrong with the server');
         }
     }
-}
 
 // Making a request
  var details = document.getElementById('details').value;
@@ -22,4 +21,5 @@ element.onclick = function() {
  request.open('POST','http://adi2342.imad.hasura-app.io/test-db',true);
  request.setRequestHeader('Content-type', 'Application/JSON');
  request.send(JSON.stringify({details : details, phone : phone, address : address, name : name}));
-// Sending data as post request
+
+}
