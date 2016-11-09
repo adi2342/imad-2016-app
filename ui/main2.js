@@ -1,5 +1,5 @@
 var element = document.getElementById('submit-button');
 
 element.onclick = function() {
-location.href = 'www.google.com'
+location.href = 'http://www.google.com'
 }
