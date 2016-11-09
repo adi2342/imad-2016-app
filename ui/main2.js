@@ -1,7 +1,7 @@
 var element = document.getElementById('submit-button');
 
 element.onclick = function() {
-    var request = new XMLhttprequest();
+    var request = new XMLhttpRequest();
     
     request.onreadystatechange = function(){
         if (request.readystate === XMLHttpRequest.DONE) {
@@ -19,5 +19,6 @@ element.onclick = function() {
  var address = document.getElementById('address').value;
  var name = document.getElementById('name').value
  request.open('POST','http://adi2342.imad.hasura-app.io/store-data',true);
+ request.setRequestHeader('Content-type', 'Application/JSON');
  request.send(JSON.stringify({details : details, phone : phone, address : address, name : name}));
 // Sending data as post request
