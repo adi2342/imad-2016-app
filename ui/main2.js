@@ -17,7 +17,7 @@ element.onclick = function() {
  var details = document.getElementById('details').value;
  var phone = document.getElementById('phone').value;
  var address = document.getElementById('address').value;
- var name = document.getElementById('name').value
+ var name = document.getElementById('name').value;
  request.open('POST','http://adi2342.imad.hasura-app.io/store-data',true);
  request.setRequestHeader('Content-type', 'Application/JSON');
  request.send(JSON.stringify({details : details, phone : phone, address : address, name : name}));
