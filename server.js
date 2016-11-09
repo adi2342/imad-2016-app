@@ -35,6 +35,21 @@ app.get('/test-db', function(err,res){
     })
 })
 
+app.post("/create-help", function(){
+    var name = req.body.name;
+    var address = req.body.address;
+    var phone = req.body.phone;
+    var email = req.body.email;
+    
+    pool.query('INSERT INTO "supply" (name,address,phone,email) VALUES ($1,$2,$3,$4)', [name,address,phone,email], function(err,res){
+        if(err) {
+            res.status(500).send(err.toString());
+        }
+        else {
+            res.send('Successfully created');
+        }
+    })
+})
 app.get('/ui/main.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 })
