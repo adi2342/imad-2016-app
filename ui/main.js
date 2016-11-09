@@ -1,5 +1,6 @@
 console.log('Loaded!');
 var element = document.getElementById("button");
+var element2 = document.getElementById("submit-button");
 
 window.onload = function() {
     
@@ -9,7 +10,6 @@ element.onclick = function(){
 
 console.log('Finished')
 
-var element2 = document.getElementById("submit-button");
 element2.onclick = function(){
     location.href = 'http://www.google.com'
 }
