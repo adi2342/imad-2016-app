@@ -43,7 +43,7 @@ app.post('/create-help', function(req,res){
     
     pool.query('INSERT INTO "supply" (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
         if(err) {
-            res.status(500).send(err.toString());
+            res.status(500).send('Something');
         }
         else {
             res.send('Successfully created');
