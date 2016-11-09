@@ -18,7 +18,7 @@ element.onclick = function() {
  var address = document.getElementById('address').value;
  var name = document.getElementById('name').value;
  console.log(name);
- request.open('POST','http://adi2342.imad.hasura-app.io/test-db',true);
+ request.open('POST','http://adi2342.imad.hasura-app.io/create-help',true);
  request.setRequestHeader('Content-type', 'Application/JSON');
  request.send(JSON.stringify({details : details, phone : phone, address : address, name : name}));
 
