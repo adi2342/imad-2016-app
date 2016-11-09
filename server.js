@@ -36,6 +36,7 @@ app.get('/test-db', function(err,res){
 })
 
 app.post('/create-help', function(req,res){
+    res.send(req.body.name);
     var name = req.body.name;
     var address = req.body.address;
     var phone = req.body.phone;
