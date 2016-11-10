@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 // When user requests for form to fill details about help he can offer, this file is fetched
 app.get('/list-help', function(req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'listhelp.html'));
-})
+});
 
 var pool = new Pool(config);
 app.get('/test-db', function(err,res){
@@ -32,34 +32,34 @@ app.get('/test-db', function(err,res){
        else {
             res.send(JSON.stringify(result.rows));
         }
-    })
-})
+    });
+});
 
 app.get('/create-help', function(req,res){
   var name = req.query.name;
   var phone = req.query.phone;
   var address = req.query.address;
   var details = req.query.details;
-  console.log(name,address,phone,details)
+  console.log(name,address,phone,details);
 pool.query('INSERT INTO supply (name) VALUES ($1)', [name], function(err){
     if(err) return onError(err);
     else {
-          console.log('Done')
+          console.log('Done');
         }
-    })
+    });
     
-})
+});
 app.get('/ui/main.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-})
+});
 
 app.get('/ui/main2.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main2.js'));
-})
+});
 
 app.get('/ui/main3.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main3.js'));
-})
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
