@@ -41,7 +41,7 @@ app.get('/create-help:tagid', function(req,res){
   //var phone = req.body.phone;
   //var details = req.body.details;
  //res.send('POST request to the homepage')
- res.send(name)
+ console.log(a)
    // if(err){
      //   res.status(500).status(toString());
        // }
