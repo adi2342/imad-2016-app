@@ -40,7 +40,12 @@ app.post('/create-help', function(req,res){
     var address = req.body.address;
     var phone = req.body.phone;
     var details = req.body.details;
-    console.log(name);
+    if(err){
+        res.status(500).status(toString());
+        }
+        else {
+            console.log(name);
+        }
  //   pool.query('INSERT INTO "supply" WHERE (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
    //     if(err) {
      //       res.status(500).send('Something');
