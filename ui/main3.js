@@ -17,7 +17,7 @@ element.onclick = function() {
  var phone = document.getElementById('phone').value;
  var address = document.getElementById('address').value;
  var name = document.getElementById('name').value;
- request.open('GET','http://adi2342.imad.hasura-app.io/create-help?name='+name,true);
+ request.open('GET','http://adi2342.imad.hasura-app.io/create-help?name='+name +"&phone=" + phone,true);
  request.send();
 
 }
