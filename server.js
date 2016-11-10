@@ -35,13 +35,13 @@ app.get('/test-db', function(err,res){
     })
 })
 
-app.post('/create-help', function(req,res){
- // var name = req.body.name;
-  var address = req.body.address;
-  var phone = req.body.phone;
-  var details = req.body.details;
+app.get('/create-help:tagid', function(req,res){
+  var name = req.params.tagid;
+  //var address = req.body.address;
+  //var phone = req.body.phone;
+  //var details = req.body.details;
  //res.send('POST request to the homepage')
- res.send(address)
+ res.send(name)
    // if(err){
      //   res.status(500).status(toString());
        // }
