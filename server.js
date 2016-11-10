@@ -48,7 +48,7 @@ app.get('/create-help', function(req,res){
         //else {
           //  console.log('Well done');
         //}
-pool.query('INSERT INTO supply (name) VALUES ($1)', [name], function(err){
+pool.query('INSERT INTO supply (name) VALUES ($1)', [name], function(err,result){
 //pool.query('INSERT INTO visit (date) VALUES ($1)', [new Date()], function(err) {
 //    if (err) return onError(err);
     if(err) return onError(err);
