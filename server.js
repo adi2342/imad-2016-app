@@ -36,16 +36,15 @@ app.get('/test-db', function(err,res){
 })
 
 app.post('/create-help', function(req,res){
-    res.setHeader('Content-Type', 'application/json');
-    var name = req.body.name;
-    var address = req.body.address;
-    var phone = req.body.phone;
-    var details = req.body.details;
+ //   var name = req.body.name;
+ // var address = req.body.address;
+ //   var phone = req.body.phone;
+ // var details = req.body.details;
     if(err){
         res.status(500).status(toString());
         }
         else {
-            console.log(name);
+            console.log('Well done');
         }
  //   pool.query('INSERT INTO "supply" WHERE (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
    //     if(err) {
