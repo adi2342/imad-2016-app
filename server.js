@@ -40,11 +40,11 @@ app.get('/create-help', function(req,res){
   var phone = req.query.phone;
   var address = req.query.address;
   var details = req.query.details;
-  res.send(address);
+ // res.send(address);
     pool.query('INSERT INTO supply (details,phone,address,name) VALUES ($1,$2,$3,$4)', [details,phone,address,name], function(err){
     if(err) return onError(err);
     else {
-          console.log('Done');
+          res.send('Successfully done bro');
         }
     });
     
