@@ -40,7 +40,7 @@ app.post('/create-help', function(req,res){
   var address = req.body.address;
   var phone = req.body.phone;
   var details = req.body.details;
- res.send('POST request to the homepage')
+ //res.send('POST request to the homepage')
  res.send(name)
    // if(err){
      //   res.status(500).status(toString());
