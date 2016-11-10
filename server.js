@@ -56,7 +56,7 @@ app.get('/create-help', function(req,res){
           res.send('Successfully created');
         }
     })
-    res.send('Success')
+    
 })
 app.get('/ui/main.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
