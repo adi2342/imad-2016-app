@@ -49,9 +49,7 @@ app.get('/create-help', function(req,res){
           //  console.log('Well done');
         //}
  pool.query('INSERT INTO supply (name) VALUES ($1)', [name], function(err){
-    if(err) {
-  res.send('Something');
-       }
+    if(err) return onError(err);
     else {
           res.send('Successfully created');
         }
