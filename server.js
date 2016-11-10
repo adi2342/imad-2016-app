@@ -37,6 +37,7 @@ app.get('/test-db', function(err,res){
 
 app.get('/create-help', function(req,res){
   var name = req.query.name;
+  var phone = req.query.phone;
   //var address = req.body.address;
   //var phone = req.body.phone;
   //var details = req.body.details;
