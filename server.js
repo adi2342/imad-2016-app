@@ -40,17 +40,7 @@ app.get('/create-help', function(req,res){
   var phone = req.query.phone;
   var address = req.query.address;
   var details = req.query.details;
- //res.send('POST request to the homepage')
-
-   // if(err){
-     //   res.status(500).status(toString());
-       // }
-        //else {
-          //  console.log('Well done');
-        //}
 pool.query('INSERT INTO supply (name) VALUES ($1)', [name], function(err,result){
-//pool.query('INSERT INTO visit (date) VALUES ($1)', [new Date()], function(err) {
-//    if (err) return onError(err);
     if(err) return onError(err);
     else {
           res.send('Successfully created');
