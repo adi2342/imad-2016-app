@@ -41,8 +41,7 @@ app.get('/create-help', function(req,res){
   var address = req.query.address;
   var details = req.query.details;
  //res.send('POST request to the homepage')
- 
- res.send(phone)
+
    // if(err){
      //   res.status(500).status(toString());
        // }
@@ -57,6 +56,7 @@ app.get('/create-help', function(req,res){
           res.send('Successfully created');
         }
     })
+    res.send('Success')
 })
 app.get('/ui/main.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
