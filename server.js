@@ -48,7 +48,7 @@ app.get('/create-help', function(req,res){
         //else {
           //  console.log('Well done');
         //}
- pool.query('INSERT INTO SUPPLY (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
+ pool.query('INSERT INTO SUPPLY (details,phone,address,name) VALUES ($1,$2,$3,$4)', [details,phone,address,name], function(err,res){
     if(err) {
   res.status(500).send('Something');
        }
