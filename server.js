@@ -41,7 +41,7 @@ app.post('/create-help', function(req,res){
     var phone = req.body.phone;
     var details = req.body.details;
     res.send(name);
- //   pool.query('INSERT INTO "supply" (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
+ //   pool.query('INSERT INTO "supply" WHERE (details,phone,name,address) VALUES ($1,$2,$3,$4)', [details,phone,name,address], function(err,res){
    //     if(err) {
      //       res.status(500).send('Something');
        // }
