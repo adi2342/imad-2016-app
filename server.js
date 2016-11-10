@@ -35,8 +35,8 @@ app.get('/test-db', function(err,res){
     })
 })
 
-app.get('/create-help:tagid', function(req,res){
-  var name = req.params.tagid;
+app.get('/create-help', function(req,res){
+  var name = req.query.name;
   //var address = req.body.address;
   //var phone = req.body.phone;
   //var details = req.body.details;
