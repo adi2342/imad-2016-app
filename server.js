@@ -65,6 +65,10 @@ app.get('/ui/main2.js', function (req,res) {
     res.sendFile(path.join(__dirname, 'ui', 'main2.js'));
 })
 
+app.get('/ui/main3.js', function (req,res) {
+    res.sendFile(path.join(__dirname, 'ui', 'main3.js'));
+})
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
