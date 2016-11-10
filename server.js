@@ -40,7 +40,7 @@ app.post('/create-help', function(err,res){
  // var address = req.body.address;
  //   var phone = req.body.phone;
  // var details = req.body.details;
- console.log('Hi there')
+ console.log('Hi there');
     if(err){
         res.status(500).status(toString());
         }
