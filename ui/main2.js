@@ -20,6 +20,6 @@ element.onclick = function() {
  console.log(name);
  request.open('POST','http://adi2342.imad.hasura-app.io/create-help',true);
  request.setRequestHeader('Content-type', 'Application/JSON');
- request.send(JSON.stringify({details : details, phone : phone, name : name, address : address}));
+ request.send(JSON.stringify({d"etails" : "details", "phone" : "phone", "name" : "name", "address" : "address"}));
 
 }
